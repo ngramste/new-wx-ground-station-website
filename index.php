@@ -91,15 +91,10 @@
                 $currentID = $newID;
                 echo "<div id=\"$newID\" class=\"imageList w3-container w3-border w3-border-black\" style=\"display:none\">";
                 echo "<ul>";
-
-                $sat = explode("-", $files[$i])[0];
-                $timestamp = date ("F d, Y H:i:s", filemtime("./audio/" . $files[$i]));
-
-                echo "<a href='?file=$files[$i]'><li>$sat: $timestamp</li></a>";
-
-              } else {
-                echo "<a href='?file=$files[$i]'><li>$sat: $timestamp</li></a>";
               }
+              $sat = explode("-", $files[$i])[0];
+              $timestamp = date ("F d, Y H:i:s", filemtime("./audio/" . $files[$i]));
+              echo "<a href='?file=$files[$i]' class='w3-large'><li>$sat: $timestamp</li></a>";
             }
             echo "</ul>";
             echo "</div>";
