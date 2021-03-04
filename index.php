@@ -94,7 +94,7 @@
               }
               $sat = explode("-", $files[$i])[0];
               $timestamp = date ("F d, Y H:i:s", filemtime("./audio/" . $files[$i]));
-              echo "<a href='?file=$files[$i]' class='w3-large'><li>$sat: $timestamp</li></a>";
+              echo "<li><a href='?file=$files[$i]' class='w3-large w3-margin'><span>$sat: $timestamp</span></a><a href='/audio/" . $files[$i] . "' class='w3-large w3-margin'>Raw Audio</a></li>";
             }
             echo "</ul>";
             echo "</div>";

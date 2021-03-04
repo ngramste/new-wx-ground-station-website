@@ -1,7 +1,7 @@
 {
   "location": {
-    "lat": "45.0468",
-    "lon": "-93.4747"
+    "lat": "lat",
+    "lon": "lon"
   },
-  "stationName": "CID Northwood"
+  "stationName": "Station Name"
 }

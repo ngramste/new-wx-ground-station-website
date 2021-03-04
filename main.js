@@ -83,6 +83,7 @@ function updateCalendar(event, year, month, files) {
     imgDay = Number(files[i].substring(13, 15));
 
     if (imgYear == year && imgMonth == month) {
+      console.log("MATCH!!");
       days[imgDay - 1].push(files[i]);
     }
   }
@@ -91,9 +92,11 @@ function updateCalendar(event, year, month, files) {
     html += "<li></li>";
   }
 
+  console.log(imgMonth);
+
   for (var i = 1; i <= numDays; i++) {
     if (0 < days[i-1].length) {
-      html += "<li class=\"w3-orange w3-button\" onclick=\"listImages(event, " + imgYear + "" + pad(imgMonth + 1, 2) + "" + pad(i, 2) + ")\">" + i + "</li>";
+      html += "<li class=\"w3-orange w3-button\" onclick=\"listImages(event, " + imgYear + "" + pad(month + 1, 2) + "" + pad(i, 2) + ")\">" + i + "</li>";
     } else {
       html += "<li class=\"w3-button\">" + i + "</li>";
     }
