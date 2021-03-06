@@ -32,15 +32,34 @@
 
         if (0 < isset($_GET["file"])) {
           $current = $_GET["file"];
+          for ($i = 0; $i < sizeof($files); $i++) {
+            if ($current == $files[$i]) {
+              if ($i != 0) {
+                $prev = $files[$i - 1];
+              }
+              if ($i != (count($files) - 1)) {
+                $next = $files[$i + 1];
+              }
+            }
+          }
         } else {
           $current = $files[0];
+          $next = $files[1];
         }
 
         $sat = explode("-", $current)[0];
         $timestamp = date ("F d, Y H:i:s", filemtime("./audio/" . $current));
         $fileBaseName = explode(".", $current)[0];
 
-        echo "<h4 class='w3-monospace' >$sat: " . $timestamp . "</h4>";
+        echo "<h4 class='w3-monospace'>";
+        if (0 < isset($next)) {
+          echo "<a href='/?file=$next' style='text-decoration:none;'>&#x25C0; </a>";
+        }
+        echo "$sat: " . $timestamp;
+        if (0 < isset($prev)) {
+          echo "<a href='/?file=$prev' style='text-decoration:none;'> &#x25B6;</a>";
+        }
+        echo "</h4>";
       ?>
 
       <div class="w3-bar w3-black">
