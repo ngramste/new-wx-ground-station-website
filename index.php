@@ -73,23 +73,53 @@
       </div>
 
       <div id="MCIR" class="map w3-container w3-border w3-border-black">
-        <img class="w3-image" style="width:100%" src="./images/<?php echo $fileBaseName; ?>-MCIR.png">
+        <?php
+          if (file_exists ( "./images/$fileBaseName-MCIR.png" )) {
+            echo "<img class='w3-image' style='width:100%' src='./images/$fileBaseName-MCIR.png'>";
+          } else {
+            echo "<h1 class='w3-monospace w3-text-orange'>Recording in Progress</h1>";
+          }
+        ?>
       </div>
 
       <div id="MSA" class="map w3-container w3-border w3-border-black" style="display:none">
-        <img class="w3-image" style="width:100%" src="./images/<?php echo $fileBaseName; ?>-MSA.png">
+        <?php
+          if (file_exists ( "./images/$fileBaseName-MSA.png" )) {
+            echo "<img class='w3-image' style='width:100%' src='./images/$fileBaseName-MSA.png'>";
+          } else {
+            echo "<h1 class='w3-monospace w3-text-orange'>Recording in Progress</h1>";
+          }
+        ?>
       </div>
 
       <div id="NO" class="map w3-container w3-border w3-border-black" style="display:none">
-        <img class="w3-image" style="width:100%" src="./images/<?php echo $fileBaseName; ?>-NO.png">
+        <?php
+          if (file_exists ( "./images/$fileBaseName-NO.png" )) {
+            echo "<img class='w3-image' style='width:100%' src='./images/$fileBaseName-NO.png'>";
+          } else {
+            echo "<h1 class='w3-monospace w3-text-orange'>Recording in Progress</h1>";
+          }
+        ?>
       </div>
 
       <div id="THERM" class="map w3-container w3-border w3-border-black" style="display:none">
-        <img class="w3-image" style="width:100%" src="./images/<?php echo $fileBaseName; ?>-THERM.png">
+        <?php
+          if (file_exists ( "./images/$fileBaseName-THERM.png" )) {
+            echo "<img class='w3-image' style='width:100%' src='./images/$fileBaseName-THERM.png'>";
+          } else {
+            echo "<h1 class='w3-monospace w3-text-orange'>Recording in Progress</h1>";
+          }
+        ?>
       </div>
 
       <div id="ZA" class="map w3-container w3-border w3-border-black" style="display:none">
-        <img class="w3-image" style="width:100%" src="./images/<?php echo $fileBaseName; ?>-ZA.png">
+        <?php
+          if (file_exists ( "./images/$fileBaseName-ZA.png" )) {
+            echo "<img class='w3-image' style='width:100%' src='./images/$fileBaseName-ZA.png'>";
+          } else {
+            echo "<h1 class='w3-monospace w3-text-orange'>Recording in Progress</h1>";
+          }
+        ?>
       </div>
 
       <div id="Archive" class="map w3-border w3-border-black w3-theme" style="display:none;">
